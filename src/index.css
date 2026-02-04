@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #003366;
+  /* Deep Navy Blue */
+  --color-secondary: #DC2626;
+  /* Strong Red */
+  --color-accent: #F3F4F6;
+  /* Light Gray for sections */
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+:root {
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
