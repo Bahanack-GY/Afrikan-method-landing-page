@@ -90,17 +90,20 @@ const Footer = () => {
                          <ul className="space-y-4">
                             <li className="flex items-start gap-3 text-gray-400 text-sm">
                                 <FaMapMarkerAlt className="text-secondary mt-1 shrink-0" />
-                                <span>123 Avenue de l'Ingénierie,<br />Yaoundé, Cameroun</span>
+                                <span>BP : 2833 Yaoundé,<br />Cameroun</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400 text-sm">
                                 <FaPhone className="text-secondary shrink-0" />
-                                <span>+237 699 99 99 99</span>
+                                <span>(+237) 242 81 91 88 / 699 52 74 36</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400 text-sm">
                                 <FaEnvelope className="text-secondary shrink-0" />
-                                <span>contact@afrikanmethod.com</span>
+                                <span>afrikanmethod@yahoo.fr</span>
                             </li>
                          </ul>
+                         <p className="text-gray-500 text-xs mt-4">
+                            RC/YAO/2009/B/687
+                         </p>
                     </div>
                 </div>
 

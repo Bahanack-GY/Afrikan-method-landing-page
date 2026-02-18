@@ -1,91 +1,81 @@
-import { FaBuilding, FaTint, FaTrashAlt, FaMapMarkedAlt, FaRoad, FaDraftingCompass, FaClipboardCheck, FaHandshake, FaDesktop } from 'react-icons/fa';
+import { FaBuilding, FaTint, FaMapMarkedAlt, FaRoad, FaDraftingCompass, FaClipboardCheck, FaHandshake } from 'react-icons/fa';
 
 export const servicesData = [
   {
     category: "Études",
     id: "etudes",
-    description: "Des études techniques complètes pour la conception et la réalisation de vos ouvrages.",
+    description: "Des études techniques complètes de la conception à la réalisation en passant par la maturation des projets.",
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
     icon: <FaBuilding />,
     items: [
       {
-        id: "batiments-ouvrages",
-        slug: "batiments-ouvrages",
-        title: "Bâtiments et Ouvrages",
-        icon: <FaBuilding />,
-        image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop",
-        description: "Conception et calcul de structures, réseaux fluides, et plans d'exécution complets pour vos projets.",
-        details: [
-          "Conception et calcul de structures en béton, bois et métallique",
-          "Dimensionnement des réseaux fluides et électriques",
-          "Établissement des plannings d'exécution et des devis estimatifs",
-          "Élaboration des plans techniques d'exécution"
-        ]
-      },
-      {
-        id: "plomberie-industrielle",
-        slug: "plomberie-industrielle",
-        title: "Plomberie Industrielle",
-        icon: <FaTint />,
-        image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=2070&auto=format&fit=crop",
-        description: "Études techniques, réfection et entretien de bâtiments, piscines et machines industrielles.",
-        details: [
-            "Études techniques de plomberie",
-            "Réfection et entretien des bâtiments, piscines et machines industrielles",
-            "Contrôle et réalisation de travaux hydrauliques en zones urbaines et rurales"
-        ]
-      },
-      {
-        id: "assainissement",
-        slug: "assainissement",
-        title: "Assainissement",
-        icon: <FaTrashAlt />,
-        image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop",
-        description: "Solutions complètes pour les études techniques et le contrôle réseaux.",
-        details: [
-            "Études techniques d'assainissement",
-            "Contrôle de réseaux d'assainissement",
-            "Gestion des eaux pluviales et usées"
-        ]
-      },
-      {
-        id: "topographie",
-        slug: "topographie",
-        title: "Topographie",
+        id: "voiries-reseaux-divers",
+        slug: "voiries-reseaux-divers",
+        title: "Etudes des voiries et réseaux divers",
         icon: <FaMapMarkedAlt />,
-        image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=2070&auto=format&fit=crop",
-        description: "Levés de détails pour projets routiers et implantation précise de bâtiments.",
+        image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop",
+        description: "Conception et dimensionnement des réseaux d'alimentation, d'assainissement et des voiries urbaines.",
         details: [
-            "Levés de détails des projets routiers",
-            "Implantation des bâtiments et ouvrages de Génie Civil",
-            "Plans topographiques détaillés"
+          "Dimensionnement des réseaux d'assainissement et pluvial",
+          "Réseaux d'Adduction d'Eau Potable (AEP)",
+          "Réseaux électriques et télécoms",
+          "Aménagement de voiries urbaines et espaces verts"
         ]
       },
       {
-        id: "infrastructures-routieres",
-        slug: "infrastructures-routieres",
-        title: "Infrastructures Routières",
+        id: "routes-autoroutes",
+        slug: "routes-autoroutes",
+        title: "Etudes des routes et autoroutes",
         icon: <FaRoad />,
         image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop",
-        description: "Études de faisabilité, entretien routier et élaboration de dossiers techniques (APS, APD, DCE).",
+        description: "Études de faisabilité et d'exécution pour infrastructures routières et autoroutières.",
         details: [
-            "Études de faisabilité des projets routiers",
-            "Entretien et réhabilitation routière",
-            "Élaboration des Avant-Projets Sommaires (APS) et Détaillés (APD)",
-            "Préparation des Dossiers de Consultation des Entreprises (DCE)"
+          "Études de tracés routiers et autoroutiers",
+          "Dimensionnement des chaussées",
+          "Études de trafic et sécurité routière",
+          "Dossiers techniques (APS, APD, DCE)"
         ]
       },
       {
-        id: "cao-dao",
-        slug: "cao-dao",
-        title: "CAO / DAO",
+        id: "etudes-batiments",
+        slug: "etudes-batiments",
+        title: "Etudes des bâtiments",
+        icon: <FaBuilding />,
+        image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop",
+        description: "Conception architecturale et technique pour tous types de bâtiments.",
+        details: [
+          "Conception architecturale et plans 2D/3D",
+          "Calculs de structures (Béton, Métal, Bois)",
+          "Études des lots techniques (Fluides, Électricité)",
+          "Réhabilitation et rénovation de bâtiments"
+        ]
+      },
+      {
+        id: "ouvrages-art",
+        slug: "ouvrages-art",
+        title: "Etudes des ouvrages d'art",
         icon: <FaDraftingCompass />,
         image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
-        description: "Conception et dessin assistés par ordinateur pour une précision optimale.",
+        description: "Conception et calculs pour ponts, viaducs, tunnels et génie civil spécialisé.",
         details: [
-            "Conception Assistée par Ordinateur (CAO)",
-            "Dessin Assisté par Ordinateur (DAO)",
-            "Modélisation 3D et rendus réalistes"
+          "Conception de ponts et viaducs",
+          "Ouvrages de soutènement",
+          "Tunnels et ouvrages enterrés",
+          "Calculs de stabilité et fondations spéciales"
+        ]
+      },
+      {
+        id: "ouvrages-connexes",
+        slug: "ouvrages-connexes",
+        title: "Etudes des ouvrages connexes",
+        icon: <FaTint />,
+        image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=2070&auto=format&fit=crop",
+        description: "Études pour aménagements hydrauliques, industriels et équipements divers.",
+        details: [
+          "Aménagements hydrauliques et drainage",
+          "Infrastructures industrielles",
+          "Equipements publics et sportifs",
+          "Aménagements extérieurs et paysagers"
         ]
       }
     ]
@@ -94,7 +84,7 @@ export const servicesData = [
     category: "Contrôle des Travaux",
     id: "controle-travaux",
     description: "Supervision rigoureuse de vos chantiers pour garantir qualité et respect des délais.",
-    image: "https://images.unsplash.com/photo-1590644365607-1c5a38fcac06?q=80&w=2053&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop",
     icon: <FaClipboardCheck />,
     items: [
       {
@@ -139,26 +129,5 @@ export const servicesData = [
       }
     ]
   },
-  {
-    category: "Prestations & Fourniture",
-    id: "prestations-fourniture",
-    description: "Fourniture de matériel informatique de pointe et maintenance pour le secteur du Génie Civil.",
-    image: "https://images.unsplash.com/photo-1517077304055-6e89abbec40e?q=80&w=2067&auto=format&fit=crop",
-    icon: <FaDesktop />,
-    items: [
-      {
-        id: "informatique-appliquee",
-        slug: "informatique-appliquee",
-        title: "Informatique Appliquée",
-        icon: <FaDesktop />,
-        image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop",
-        description: "Fourniture de matériel, dépannage et maintenance informatique appliqués au Génie Civil.",
-        details: [
-            "Matériel informatique spécifique au Génie Civil",
-            "Dépannage et Maintenance Informatique",
-            "Installation de logiciels techniques"
-        ]
-      }
-    ]
-  }
+
 ];

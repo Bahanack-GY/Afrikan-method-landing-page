@@ -1,14 +1,23 @@
 import { motion } from 'framer-motion';
-import { FaBuilding, FaIndustry, FaLandmark, FaLeaf, FaHardHat, FaCity } from 'react-icons/fa';
+
+import BubanNguDesco from '../assets/img/partenaires/BUBAN NGU DESCO.png';
+import Eccam from '../assets/img/partenaires/ECCAM.png';
+import EgisEngineering from '../assets/img/partenaires/EGIS ENGINEERING.png';
+import EmergingEngineering from '../assets/img/partenaires/EMERGING ENGINEERING.png';
+import GeneralEngineering from '../assets/img/partenaires/GENERAL ENGINEERING.png';
+import Integc from '../assets/img/partenaires/INTEGC.png';
+import IntegraBetSarl from '../assets/img/partenaires/INTEGRA BET SARL.png';
+import SolSolution from '../assets/img/partenaires/SOL SOLUTION.png';
 
 const partners = [
-  { name: "EcoBuild SA", icon: <FaLeaf /> },
-  { name: "UrbanStruct", icon: <FaCity /> },
-  { name: "AfriRoads", icon: <FaRoad /> }, // FaRoad imported below if needed, else using generic
-  { name: "MegaWorks", icon: <FaIndustry /> },
-  { name: "GovInfra", icon: <FaLandmark /> },
-  { name: "BuildTech", icon: <FaHardHat /> },
-  { name: "CivilEng Group", icon: <FaBuilding /> },
+  { name: "BUBAN NGU DESCO", logo: BubanNguDesco },
+  { name: "ECCAM", logo: Eccam },
+  { name: "EGIS ENGINEERING", logo: EgisEngineering },
+  { name: "EMERGING ENGINEERING", logo: EmergingEngineering },
+  { name: "GENERAL ENGINEERING", logo: GeneralEngineering },
+  { name: "INTEGC", logo: Integc },
+  { name: "INTEGRA BET SARL", logo: IntegraBetSarl },
+  { name: "SOL SOLUTION", logo: SolSolution },
 ];
 
 // Duplicate the list to ensure smooth infinite scroll
@@ -37,23 +46,27 @@ const LogoMarquee = () => {
       </div>
 
       <div className="relative w-full max-w-7xl mx-auto overflow-hidden mask-gradient-x">
-         {/* Gradient Masks for fading effect at edges - creating manually with CSS or inline styles if mask-image isn't set up, 
-             but simple overflow-hidden is often enough. Adding gradient overlays on sides. */}
+         {/* Gradient Masks for fading effect at edges */}
         <div className="absolute top-0 left-0 w-32 h-full bg-linear-to-r from-white to-transparent z-10"></div>
         <div className="absolute top-0 right-0 w-32 h-full bg-linear-to-l from-white to-transparent z-10"></div>
 
         <div className="flex overflow-hidden">
             <motion.div
-                className="flex gap-16 min-w-max px-8"
+                className="flex gap-16 min-w-max px-8 items-center"
                 variants={marqueeVariants}
                 animate="animate"
             >
                 {[...partners, ...partners, ...partners].map((partner, index) => (
                     <div key={index} className="flex flex-col items-center justify-center opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 transform hover:scale-110 cursor-pointer">
-                        <div className="text-6xl text-primary mb-2">
-                            {partner.icon}
+                        <div className="h-20 w-auto mb-2 flex items-center justify-center">
+                            <img 
+                                src={partner.logo} 
+                                alt={partner.name} 
+                                className="h-full w-auto object-contain max-w-[150px]"
+                            />
                         </div>
-                        <span className="font-bold text-gray-700">{partner.name}</span>
+                        {/* Use sr-only if you want to hide text but keep it accessible, or remove if logos are enough */}
+                        {/* <span className="font-bold text-gray-700">{partner.name}</span> */}
                     </div>
                 ))}
             </motion.div>
@@ -62,8 +75,5 @@ const LogoMarquee = () => {
     </section>
   );
 };
-
-// Need to import FaRoad separately or add to top import if missing
-import { FaRoad } from 'react-icons/fa';
 
 export default LogoMarquee;

@@ -29,8 +29,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h5 className="font-bold text-lg">Téléphone</h5>
-                  <p className="text-gray-300">+237 6XX XX XX XX</p>
-                  <p className="text-gray-300">+237 6XX XX XX XX</p>
+                  <p className="text-gray-300">(+237) 242 81 91 88</p>
+                  <p className="text-gray-300">(+237) 699 52 74 36</p>
                 </div>
               </div>
 
@@ -40,7 +40,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h5 className="font-bold text-lg">Email</h5>
-                  <p className="text-gray-300">contact@afrikanmethod.com</p>
+                  <p className="text-gray-300">afrikanmethod@yahoo.fr</p>
                 </div>
               </div>
 
@@ -50,8 +50,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h5 className="font-bold text-lg">Adresse</h5>
-                  <p className="text-gray-300">Yaoundé, Cameroun</p>
-                  <p className="text-gray-300">BP XXXX</p>
+                  <p className="text-gray-300">BP : 2833 Yaoundé</p>
+                  <p className="text-gray-300 text-sm">RC/YAO/2009/B/687</p>
                 </div>
               </div>
             </div>

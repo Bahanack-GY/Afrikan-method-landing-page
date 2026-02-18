@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Team from "../assets/img/Team.png"
 
 const About = () => {
   return (
@@ -44,7 +45,7 @@ const About = () => {
           >
             <div className="relative rounded-xl overflow-hidden shadow-2xl">
                 <img 
-                    src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1931&auto=format&fit=crop" 
+                    src={Team} 
                     alt="Ingénieurs au travail" 
                     className="w-full h-auto object-cover"
                 />
