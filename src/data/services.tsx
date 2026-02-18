@@ -5,7 +5,7 @@ export const servicesData = [
     category: "Études",
     id: "etudes",
     description: "Des études techniques complètes de la conception à la réalisation en passant par la maturation des projets.",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1713557112617-e12d67bddc3a?q=80&w=2069&auto=format&fit=crop",
     icon: <FaBuilding />,
     items: [
       {
@@ -13,7 +13,7 @@ export const servicesData = [
         slug: "voiries-reseaux-divers",
         title: "Etudes des voiries et réseaux divers",
         icon: <FaMapMarkedAlt />,
-        image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1766330301270-e4c652b1c538?q=80&w=2070&auto=format&fit=crop",
         description: "Conception et dimensionnement des réseaux d'alimentation, d'assainissement et des voiries urbaines.",
         details: [
           "Dimensionnement des réseaux d'assainissement et pluvial",
@@ -27,7 +27,7 @@ export const servicesData = [
         slug: "routes-autoroutes",
         title: "Etudes des routes et autoroutes",
         icon: <FaRoad />,
-        image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1735837836870-17bf7e6d2bd6?q=80&w=2070&auto=format&fit=crop",
         description: "Études de faisabilité et d'exécution pour infrastructures routières et autoroutières.",
         details: [
           "Études de tracés routiers et autoroutiers",
@@ -41,7 +41,7 @@ export const servicesData = [
         slug: "etudes-batiments",
         title: "Etudes des bâtiments",
         icon: <FaBuilding />,
-        image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1759111892854-f62c49692506?q=80&w=2070&auto=format&fit=crop",
         description: "Conception architecturale et technique pour tous types de bâtiments.",
         details: [
           "Conception architecturale et plans 2D/3D",
@@ -55,7 +55,7 @@ export const servicesData = [
         slug: "ouvrages-art",
         title: "Etudes des ouvrages d'art",
         icon: <FaDraftingCompass />,
-        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1721907758701-d118fdd56b50?q=80&w=2070&auto=format&fit=crop",
         description: "Conception et calculs pour ponts, viaducs, tunnels et génie civil spécialisé.",
         details: [
           "Conception de ponts et viaducs",
@@ -69,7 +69,7 @@ export const servicesData = [
         slug: "ouvrages-connexes",
         title: "Etudes des ouvrages connexes",
         icon: <FaTint />,
-        image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=2070&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1735837883394-b05e424e57d9?q=80&w=2070&auto=format&fit=crop",
         description: "Études pour aménagements hydrauliques, industriels et équipements divers.",
         details: [
           "Aménagements hydrauliques et drainage",
@@ -84,7 +84,7 @@ export const servicesData = [
     category: "Contrôle des Travaux",
     id: "controle-travaux",
     description: "Supervision rigoureuse de vos chantiers pour garantir qualité et respect des délais.",
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1602652897853-c0d370f7cc7a?q=80&w=2069&auto=format&fit=crop",
     icon: <FaClipboardCheck />,
     items: [
       {
@@ -92,7 +92,7 @@ export const servicesData = [
         slug: "supervision-travaux",
         title: "Supervision de Travaux",
         icon: <FaClipboardCheck />,
-        image: "https://plus.unsplash.com/premium_photo-1663040329655-ce120539c762?q=80&w=2070&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1602652897853-c0d370f7cc7a?q=80&w=2070&auto=format&fit=crop",
         description: "Contrôle rigoureux pour travaux routiers, ouvrages d'art et bâtiments (construction et réhabilitation).",
         details: [
             "Contrôle des travaux routiers (Construction - Entretien - Réhabilitation)",
@@ -107,7 +107,7 @@ export const servicesData = [
     category: "Conseils",
     id: "conseils",
     description: "Expertise et accompagnement stratégique pour la réussite de vos projets immobiliers et BTP.",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1573497701240-345a300b8d36?q=80&w=2070&auto=format&fit=crop",
     icon: <FaHandshake />,
     items: [
       {

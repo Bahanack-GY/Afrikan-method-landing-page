@@ -50,7 +50,7 @@ const About = () => {
                     className="w-full h-auto object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-primary/90 to-transparent p-6">
-                    <p className="text-white font-bold text-lg">Plus de 10 ans d'expérience</p>
+                    <p className="text-white font-bold text-lg">Plus de 15 ans d'expérience</p>
                 </div>
             </div>
             {/* Decorative element */}
