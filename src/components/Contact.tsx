@@ -1,13 +1,16 @@
 import { motion } from 'framer-motion';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="contact" className="py-20 bg-primary text-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-secondary font-bold text-lg uppercase tracking-wider mb-2">Contactez-nous</h2>
-          <h3 className="text-4xl font-bold text-white">Prêt à démarrer votre projet ?</h3>
+          <h2 className="text-secondary font-bold text-lg uppercase tracking-wider mb-2">{t('contact.sectionTitle')}</h2>
+          <h3 className="text-4xl font-bold text-white">{t('contact.heading')}</h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -17,9 +20,9 @@ const Contact = () => {
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
           >
-            <h4 className="text-2xl font-bold mb-6">Nos Coordonnées</h4>
+            <h4 className="text-2xl font-bold mb-6">{t('contact.infoTitle')}</h4>
             <p className="text-gray-300 mb-8 leading-relaxed">
-              N'hésitez pas à nous contacter pour toute demande d'information ou devis. Notre équipe est à votre écoute pour vous accompagner dans vos projets.
+              {t('contact.infoText')}
             </p>
 
             <div className="space-y-6">
@@ -28,7 +31,7 @@ const Contact = () => {
                   <FaPhone />
                 </div>
                 <div>
-                  <h5 className="font-bold text-lg">Téléphone</h5>
+                  <h5 className="font-bold text-lg">{t('contact.phone')}</h5>
                   <p className="text-gray-300">(+237) 242 81 91 88</p>
                   <p className="text-gray-300">(+237) 699 52 74 36</p>
                 </div>
@@ -39,7 +42,7 @@ const Contact = () => {
                   <FaEnvelope />
                 </div>
                 <div>
-                  <h5 className="font-bold text-lg">Email</h5>
+                  <h5 className="font-bold text-lg">{t('contact.email')}</h5>
                   <p className="text-gray-300">afrikanmethod@yahoo.fr</p>
                 </div>
               </div>
@@ -49,7 +52,7 @@ const Contact = () => {
                   <FaMapMarkerAlt />
                 </div>
                 <div>
-                  <h5 className="font-bold text-lg">Adresse</h5>
+                  <h5 className="font-bold text-lg">{t('contact.address')}</h5>
                   <p className="text-gray-300">BP : 2833 Yaoundé</p>
                   <p className="text-gray-300 text-sm">RC/YAO/2009/B/687</p>
                 </div>
@@ -68,24 +71,24 @@ const Contact = () => {
             <form className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
-                  <input type="text" id="name" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition" placeholder="Votre nom" />
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">{t('contact.formName')}</label>
+                  <input type="text" id="name" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition" placeholder={t('contact.formNamePlaceholder')} />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                  <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition" placeholder="votre@email.com" />
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">{t('contact.formEmail')}</label>
+                  <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition" placeholder={t('contact.formEmailPlaceholder')} />
                 </div>
               </div>
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Sujet</label>
-                <input type="text" id="subject" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition" placeholder="Objet de votre message" />
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">{t('contact.formSubject')}</label>
+                <input type="text" id="subject" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition" placeholder={t('contact.formSubjectPlaceholder')} />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                <textarea id="message" rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition" placeholder="Votre message..."></textarea>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">{t('contact.formMessage')}</label>
+                <textarea id="message" rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition" placeholder={t('contact.formMessagePlaceholder')}></textarea>
               </div>
               <button type="button" className="w-full py-3 bg-secondary text-white font-bold rounded-lg hover:bg-red-700 transition shadow-lg">
-                Envoyer le message
+                {t('contact.formSubmit')}
               </button>
             </form>
           </motion.div>

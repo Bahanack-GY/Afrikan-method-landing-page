@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,11 +18,11 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Accueil', href: '/#home' },
-    { name: 'A propos', href: '/#about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Nos Projets', href: '/#projects' },
-    { name: 'Contact', href: '/#contact' },
+    { name: t('nav.home'), href: '/#home' },
+    { name: t('nav.about'), href: '/#about' },
+    { name: t('nav.services'), href: '/services' },
+    { name: t('nav.projects'), href: '/#projects' },
+    { name: t('nav.contact'), href: '/#contact' },
   ];
 
   return (
@@ -35,7 +38,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -47,10 +50,12 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
+          <LanguageSwitcher scrolled={scrolled} />
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-3">
+            <LanguageSwitcher scrolled={scrolled} />
             <button 
                 onClick={() => setIsOpen(!isOpen)}
                 className={`text-2xl ${scrolled ? 'text-gray-800' : 'text-white'}`}

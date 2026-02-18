@@ -2,8 +2,11 @@ import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { servicesData } from '../data/services';
+import { useTranslation } from 'react-i18next';
 
 const Services = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="services" className="py-20 bg-accent/50">
       <div className="container mx-auto px-6">
@@ -13,15 +16,15 @@ const Services = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
         >
-          <h2 className="text-secondary font-bold text-lg uppercase tracking-wider mb-2">Nos Expertises</h2>
-          <h3 className="text-4xl font-bold text-primary">Domaines de Spécialisation</h3>
+          <h2 className="text-secondary font-bold text-lg uppercase tracking-wider mb-2">{t('services.sectionTitle')}</h2>
+          <h3 className="text-4xl font-bold text-primary">{t('services.heading')}</h3>
         </motion.div>
 
         <div className="space-y-20">
           {servicesData.map((category, catIndex) => (
             <div key={catIndex} id={category.id} className="scroll-mt-28">
               <h4 className="text-2xl font-bold text-gray-800 mb-10 border-l-4 border-secondary pl-4">
-                {category.category}
+                {t(category.categoryKey)}
               </h4>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-12">
                 {category.items.map((service, index) => (
@@ -39,7 +42,7 @@ const Services = () => {
                         <div className="h-48 overflow-hidden relative">
                             <img 
                                 src={service.image} 
-                                alt={service.title} 
+                                alt={t(service.titleKey)} 
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
@@ -54,16 +57,16 @@ const Services = () => {
                         <div className="pt-12 pb-8 px-6 text-center grow flex flex-col justify-between">
                             <div>
                                 <h5 className="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors">
-                                    {service.title}
+                                    {t(service.titleKey)}
                                 </h5>
                                 <p className="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">
-                                    {service.description}
+                                    {t(service.descriptionKey)}
                                 </p>
                             </div>
                         
                             <div className="flex justify-center">
                                 <span className="inline-flex items-center text-sm font-bold text-secondary uppercase tracking-wider hover:text-primary transition-colors gap-2">
-                                    Voir le service <FaArrowRight className="text-xs" />
+                                    {t('services.viewService')} <FaArrowRight className="text-xs" />
                                 </span>
                             </div>
                         </div>

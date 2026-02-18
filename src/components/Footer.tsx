@@ -1,21 +1,22 @@
 import { FaFacebook, FaLinkedin, FaTwitter, FaInstagram, FaPhone, FaEnvelope, FaMapMarkerAlt, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
+    const { t } = useTranslation();
 
     const footerLinks = [
-        { name: 'Accueil', path: '/' },
-        { name: 'À Propos', path: '/#about' },
-        { name: 'Services', path: '/services' },
-        { name: 'Contact', path: '/#contact' },
+        { name: t('nav.home'), path: '/' },
+        { name: t('nav.about'), path: '/#about' },
+        { name: t('nav.services'), path: '/services' },
+        { name: t('nav.contact'), path: '/#contact' },
     ];
 
     const servicesLinks = [
-        { name: 'Études Techniques', path: '/services#etudes' },
-        { name: 'Contrôle des Travaux', path: '/services#controle-travaux' },
-        { name: 'Conseils & Expertise', path: '/services#conseils' },
-        { name: 'Prestations & Fourniture', path: '/services#prestations-fourniture' },
+        { name: t('footer.serviceLinks.etudes'), path: '/services#etudes' },
+        { name: t('footer.serviceLinks.controle'), path: '/services#controle-travaux' },
+        { name: t('footer.serviceLinks.conseils'), path: '/services#conseils' },
     ];
 
     return (
@@ -39,7 +40,7 @@ const Footer = () => {
                             </div>
                         </Link>
                         <p className="text-gray-400 text-sm leading-relaxed">
-                            Votre partenaire de confiance en Génie Civil. Nous transformons vos visions en infrastructures durables avec rigueur et expertise.
+                            {t('footer.brandDescription')}
                         </p>
                         <div className="flex space-x-4">
                             {[FaFacebook, FaTwitter, FaLinkedin, FaInstagram].map((Icon, i) => (
@@ -52,7 +53,7 @@ const Footer = () => {
 
                     {/* Column 2: Services */}
                     <div>
-                        <h4 className="text-lg font-bold mb-6 text-white border-b-2 border-secondary inline-block pb-2">Nos Services</h4>
+                        <h4 className="text-lg font-bold mb-6 text-white border-b-2 border-secondary inline-block pb-2">{t('footer.servicesTitle')}</h4>
                         <ul className="space-y-3">
                             {servicesLinks.map((link, i) => (
                                 <li key={i}>
@@ -66,7 +67,7 @@ const Footer = () => {
 
                     {/* Column 3: Quick Links */}
                     <div>
-                        <h4 className="text-lg font-bold mb-6 text-white border-b-2 border-secondary inline-block pb-2">Liens Rapides</h4>
+                        <h4 className="text-lg font-bold mb-6 text-white border-b-2 border-secondary inline-block pb-2">{t('footer.quickLinksTitle')}</h4>
                         <ul className="space-y-3">
                             {footerLinks.map((link, i) => (
                                 <li key={i}>
@@ -86,7 +87,7 @@ const Footer = () => {
 
                     {/* Column 4: Contact */}
                     <div>
-                         <h4 className="text-lg font-bold mb-6 text-white border-b-2 border-secondary inline-block pb-2">Nous Contacter</h4>
+                         <h4 className="text-lg font-bold mb-6 text-white border-b-2 border-secondary inline-block pb-2">{t('footer.contactTitle')}</h4>
                          <ul className="space-y-4">
                             <li className="flex items-start gap-3 text-gray-400 text-sm">
                                 <FaMapMarkerAlt className="text-secondary mt-1 shrink-0" />
@@ -108,10 +109,10 @@ const Footer = () => {
                 </div>
 
                 <div className="border-t border-gray-800 pt-8 mt-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-                    <p>&copy; {currentYear} Afrikan Method. Tous droits réservés.</p>
+                    <p>{t('footer.copyright', { year: currentYear })}</p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
-                        <a href="#" className="hover:text-white transition-colors">Confidentialité</a>
-                        <a href="#" className="hover:text-white transition-colors">Mentions Légales</a>
+                        <a href="#" className="hover:text-white transition-colors">{t('footer.privacy')}</a>
+                        <a href="#" className="hover:text-white transition-colors">{t('footer.legal')}</a>
                     </div>
                 </div>
             </div>

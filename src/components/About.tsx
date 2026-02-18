@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import Team from "../assets/img/Team.png"
 
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-6">
@@ -14,23 +17,23 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="md:w-1/2"
           >
-            <h2 className="text-secondary font-bold text-lg uppercase tracking-wider mb-2">À Propos de Nous</h2>
-            <h3 className="text-4xl font-bold text-primary mb-6">Expertise et Innovation au Service du Génie Civil</h3>
+            <h2 className="text-secondary font-bold text-lg uppercase tracking-wider mb-2">{t('about.sectionTitle')}</h2>
+            <h3 className="text-4xl font-bold text-primary mb-6">{t('about.heading')}</h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              AFRIKAN METHOD SARL est un bureau d'études techniques de premier plan, spécialisé dans la conception, le contrôle et le conseil pour les projets d'infrastructures et de bâtiments.
+              {t('about.p1')}
             </p>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Notre équipe d'ingénieurs et techniciens qualifiés s'engage à fournir des solutions durables et innovantes, respectant les normes les plus strictes de qualité et de sécurité.
+              {t('about.p2')}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
                 <div className="p-4 bg-accent rounded-lg">
-                    <h4 className="font-bold text-primary mb-2">Notre Mission</h4>
-                    <p className="text-sm text-gray-600">Offrir une expertise technique d'excellence pour bâtir l'Afrique de demain.</p>
+                    <h4 className="font-bold text-primary mb-2">{t('about.missionTitle')}</h4>
+                    <p className="text-sm text-gray-600">{t('about.missionText')}</p>
                 </div>
                 <div className="p-4 bg-accent rounded-lg">
-                    <h4 className="font-bold text-secondary mb-2">Notre Vision</h4>
-                    <p className="text-sm text-gray-600">Être le partenaire de référence pour les projets de construction complexes.</p>
+                    <h4 className="font-bold text-secondary mb-2">{t('about.visionTitle')}</h4>
+                    <p className="text-sm text-gray-600">{t('about.visionText')}</p>
                 </div>
             </div>
           </motion.div>
@@ -46,11 +49,11 @@ const About = () => {
             <div className="relative rounded-xl overflow-hidden shadow-2xl">
                 <img 
                     src={Team} 
-                    alt="Ingénieurs au travail" 
+                    alt={t('about.imageAlt')} 
                     className="w-full h-auto object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-primary/90 to-transparent p-6">
-                    <p className="text-white font-bold text-lg">Plus de 15 ans d'expérience</p>
+                    <p className="text-white font-bold text-lg">{t('about.experience')}</p>
                 </div>
             </div>
             {/* Decorative element */}

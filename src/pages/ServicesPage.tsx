@@ -4,9 +4,11 @@ import Footer from '../components/Footer';
 import Services from '../components/Services';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const ServicesPage = () => {
     const { hash } = useLocation();
+    const { t } = useTranslation();
 
     useEffect(() => {
         if (hash) {
@@ -32,9 +34,9 @@ const ServicesPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="relative z-10 container mx-auto px-6"
              >
-                 <h1 className="text-4xl md:text-5xl font-bold mb-4">Nos Services Complets</h1>
+                 <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('servicesPage.title')}</h1>
                  <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                     Découvrez l'ensemble de nos prestations en ingénierie, contrôle, conseils et fournitures.
+                     {t('servicesPage.subtitle')}
                  </p>
              </motion.div>
         </div>
