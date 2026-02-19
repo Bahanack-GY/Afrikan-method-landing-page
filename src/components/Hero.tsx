@@ -1,18 +1,31 @@
 import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import { useRef, useEffect } from 'react';
+import heroVideo from '../assets/Hero.mp4';
 
 const Hero = () => {
   const { t } = useTranslation();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.5;
+    }
+  }, []);
 
   return (
     <section id="home" className="relative h-screen flex items-center bg-gray-900 overflow-hidden">
-        {/* Background Overlay */}
+        {/* Background Video */}
         <div className="absolute inset-0 z-0">
              <div className="absolute inset-0 bg-linear-to-r from-primary/90 to-black/70 z-10" />
-             <img 
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop" 
-                alt="Construction Site" 
+             <video
+                ref={videoRef}
+                src={heroVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="w-full h-full object-cover"
              />
         </div>
