@@ -1,6 +1,7 @@
 import { FaFacebook, FaLinkedin, FaTwitter, FaInstagram, FaPhone, FaEnvelope, FaMapMarkerAlt, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import Logo from '../assets/Logo.png'
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -32,7 +33,7 @@ const Footer = () => {
                         <Link to="/" className="inline-block">
                              <div className="flex items-center gap-2">
                                 <div className="w-10 h-10 bg-white rounded-sm flex items-center justify-center text-primary font-bold text-xl">
-                                    A
+                                    <img src={Logo} alt="Logo afrikan method" />
                                 </div>
                                 <span className="text-2xl font-bold tracking-tight text-white">
                                     Afrikan <span className="text-secondary">Method</span>
